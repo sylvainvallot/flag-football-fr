@@ -10,21 +10,24 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content="The Home of Flag Football" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏈</text></svg>">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
+	<footer>
+		<a href="mailto:contact@flag-football.fr" class="contact">contact@flag-football.fr</a>
+	</footer>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--accent: 241, 111, 120;
+		--accent-light: 250, 204, 207;
+		--accent-dark: 228, 22, 36;
 		--accent-gradient: linear-gradient(
 			45deg,
 			rgb(var(--accent)),
@@ -35,6 +38,24 @@ const { title } = Astro.props;
 	html {
 		font-family: system-ui, sans-serif;
 		background: #13151a;
+		height: 100vh;
+	}
+	footer {
+		color: white;
+		opacity: 0.5;
+		text-align: center;
+		padding: 2rem;
+		position: relative;
+		bottom: 0;
+	}
+	.contact {
+		color: white;
+		text-decoration: none;
+	}
+	.contact:hover {
+		text-decoration: underline;
+		text-underline-position: below;
+
 	}
 	code {
 		font-family:
